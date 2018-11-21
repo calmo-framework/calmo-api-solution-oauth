@@ -1,0 +1,41 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Repository Project</Name>
+    <Description>Creates a new Repository project, used to get data from databases, files, services or any other source. Uses Calmô! Framework.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Repository Project</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.jpg</Icon>
+    <PreviewImage>__PreviewImage.jpg</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Calmo.Repository.csproj" File="Calmo.Repository.csproj" ReplaceParameters="true">
+      <Folder Name="DTO" TargetFolderName="DTO">
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserDTO.cs">UserDTO.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="UserRepository.cs">UserRepository.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+      <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+      <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+      <packages repository="template">
+        <package id="Calmo.Core" version="1.0.2" targetFramework="net462" />
+        <package id="Calmo.Data" version="1.0.2" targetFramework="net462" />
+        <package id="Calmo.Data.SQLServer" version="1.0.2" targetFramework="net462" />
+        <package id="Dapper" version="1.50.5" targetFramework="net462" />
+      </packages>
+  </WizardData>
+</VSTemplate>

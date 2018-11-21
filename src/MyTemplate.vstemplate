@@ -1,0 +1,22 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Calmo API Solution OAuth</Name>
+        <Description>Creates a new API solution that uses Domain Driven Design applied with Calmo! Framework and Owin. Dont forget to run "Update-Package -reinstall" at NuGet Package Console.</Description>
+        <Icon>calmo.SVG</Icon>
+        <ProjectType>CSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Api" CopyParameters="true">                
+                Api\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Domain" CopyParameters="true">
+                Domain\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Repository" CopyParameters="true">
+                Repository\MyTemplate.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>
